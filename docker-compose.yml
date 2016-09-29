@@ -18,7 +18,8 @@ services:
 
   nginx:
     restart: unless-stopped
-    build: ./nginx/
+    image: billsb/alpine-nginx-proxy
+    container_name: nginx
     ports:
       - "80:80"
     volumes_from:
